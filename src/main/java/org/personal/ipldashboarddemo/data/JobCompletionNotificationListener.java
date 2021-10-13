@@ -61,6 +61,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
                         if(team != null) team.setTotalWins((long) object[1]);
                     });
 
+        // Team table gets populated here.
         teamData.values().forEach(team -> entityManager.persist(team));
         teamData.values().forEach(team -> System.out.println(team.toString()));
 //            jdbcTemplate.query("SELECT team1, team2, date FROM match",
